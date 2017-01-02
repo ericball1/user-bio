@@ -4,6 +4,12 @@
 <head>
     <title>user-bio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .hide {
+            display: none;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -11,17 +17,20 @@
         <h1 style="text-align:center">user-bio</h1>
         <hr>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        <h3 id="logTitle">Log In:</h3>
+        <div id="loginPane">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <button class="btn btn-default" id="login-btn">Login</button>
+            <button class="btn btn-default" id="sign-up-button">Sign Up</button>
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <button class="btn btn-default" id="login-btn">Login</button>
-        <button class="btn btn-default" id="sign-up-button">Sign Up</button>
-        <button class="btn btn-default" id="log-out-button" hidden>Log Out</button>
+        <button class="btn btn-danger hide" id="log-out-button">Log Out</button>
     </div>
 
 
