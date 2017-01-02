@@ -20,6 +20,7 @@
     });
 
     btnSignUp.addEventListener('click', e => {
+        // TODO: Validate Email
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
