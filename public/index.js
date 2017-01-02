@@ -5,7 +5,8 @@
     const btnSignUp = document.getElementById("sign-up-button");
     const btnLogOut = document.getElementById("log-out-button");
     const logTitle = document.getElementById("logTitle");
-    const loginPane = document.getElementById("loginPane")
+    const loginPane = document.getElementById("loginPane");
+    const txtDB = document.getElementById("bio");
 
     btnLogIn.addEventListener('click', e => {
         const email = txtEmail.value;
@@ -45,6 +46,12 @@
             logTitle.innerHTML = "Login";
             loginPane.classList.remove("hide");
         }
+    });
+
+    const dbRefObject = firebase.database().ref().child("bio");
+    dbRefObject.on('value', snap => {
+        console.log(snap.val());
+        txtDB.innerHTML = snap.val();
     });
 
 })();
