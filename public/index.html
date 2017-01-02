@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>user-bio</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	</head>
-	<body>
-		<div class="container">
-			<h1>user-bio</h1>
-		</div>
-		
-		
-		<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
-		<script>
-		  // Initialize Firebase
-		  var config = {
-		    apiKey: "AIzaSyDVjQ3DEAVAiaxo4vwfkEHQzmyK_u2kvYY",
-		    authDomain: "user-bio.firebaseapp.com",
-		    databaseURL: "https://user-bio.firebaseio.com",
-		    storageBucket: "user-bio.appspot.com",
-		    messagingSenderId: "906450946968"
-		  };
-		  firebase.initializeApp(config);
-		</script>
-	</body>
+
+<head>
+    <title>user-bio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align:center">user-bio</h1>
+        <hr>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button class="btn btn-default" id="login-btn">Login</button>
+        <button class="btn btn-default" id="sign-up-button">Sign Up</button>
+        <button class="btn btn-default" id="log-out-button" hidden>Log Out</button>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDVjQ3DEAVAiaxo4vwfkEHQzmyK_u2kvYY",
+            authDomain: "user-bio.firebaseapp.com",
+            databaseURL: "https://user-bio.firebaseio.com",
+            storageBucket: "user-bio.appspot.com",
+            messagingSenderId: "906450946968"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+    <script src="index.js"></script>
+</body>
+
 </html>
